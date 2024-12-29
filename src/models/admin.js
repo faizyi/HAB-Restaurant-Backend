@@ -8,7 +8,11 @@ const __dirName = path.dirname(__fileName);
 const dataFilePath = path.join(__dirName, "../data/admins.json");
 
 if (!fs.existsSync(dataFilePath)) {
-    fs.writeFileSync(dataFilePath, JSON.stringify([]));
+    try {
+        fs.writeFileSync(dataFilePath, JSON.stringify([]));
+    } catch (err) {
+        console.error("Error initializing the admins file:", err);
+    }
 }
 
 
@@ -28,6 +32,7 @@ export const getAdmins = () => {
         return admins;
     } catch (error) {
         console.log(error);
+        return [];
     }
 }
 
