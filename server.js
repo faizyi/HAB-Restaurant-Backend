@@ -3,19 +3,24 @@ import AdminRoutes from "./src/routes/admin.js"
 import DishesRoutes from "./src/routes/dish.js"
 import cors from "cors";
 
+import path from "path"
+import { fileURLToPath } from "url";
+
+const __fileName = fileURLToPath(import.meta.url);
+const __dirName = path.dirname(__fileName);
+
 
 const app = express();
 const PORT = 9002;
 
 
 
-
 app.use(express.json());
-// app.use("/")
+app.use("/public/uploads", express.static(path.join(__dirName, "public/uploads")));
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
-    origin: "http://localhost:5173",
-    credentials: true
+    origin: "https://hab-restaurant.vercel.app/",
+    credentials: true, 
 }));
 
 app.get("/", (req, res) => {

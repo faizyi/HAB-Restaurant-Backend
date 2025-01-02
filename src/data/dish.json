@@ -1,0 +1,30 @@
+[
+  {
+    "id": "f1c482e2-fc0f-41f6-a7d5-ac8e05588061",
+    "dishName": "biryani",
+    "dishDisc": "full plate",
+    "dishPrice": "15",
+    "dishImage": "1735817722900-218826740-download.jpg"
+  },
+  {
+    "id": "8ac77056-13a1-4a9e-9834-cf580eab2ed8",
+    "dishName": "Nihari",
+    "dishDisc": "full plate",
+    "dishPrice": "25",
+    "dishImage": "1735817744084-393037652-pakistan-trip-118-X3.jpg"
+  },
+  {
+    "id": "c01c8aaf-8f0c-469b-b003-dbf0ac76fdf7",
+    "dishName": "Kabuli Pulao",
+    "dishDisc": "Full Plate",
+    "dishPrice": "15",
+    "dishImage": "1735819418897-130882091-pakistan-trip-243-X3.jpg"
+  },
+  {
+    "id": "1faa871d-f2f3-472b-8fe4-6717771fe0e4",
+    "dishName": "Karahi",
+    "dishDisc": "full plate",
+    "dishPrice": "30",
+    "dishImage": "1735820058684-816160449-pakistan-trip-42-X3.jpg"
+  }
+]
