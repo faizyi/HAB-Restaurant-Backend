@@ -7,11 +7,11 @@ const __dirName = path.dirname(__fileName)
 
 const dataFilePath = path.join(__dirName, "../data/dish.json");
 
-if (!fs.existsSync(dataFilePath)) {
+if(!fs.existsSync(dataFilePath)){
     try {
-        fs.writeFileSync(dataFilePath, JSON.stringify([]));
-    } catch (err) {
-        console.error("Error initializing the admins file:", err);
+        fs.writeFile(dataFilePath, JSON.stringify([]))
+    } catch (error) {
+        console.error("Error initializing the dish file:", error);
     }
 }
 

@@ -3,6 +3,7 @@ export const adminSignup = async(req, res) => {
     try {
         const {name, email, password} = req.body;
         const newAdmin = {name, email, password};
+        console.log(newAdmin)
         saveAdmin(newAdmin);
         res.status(201).json({ msg: "Admin created successfully", admin: newAdmin });
     } catch (error) {
@@ -14,7 +15,7 @@ export const adminLogin = async(req, res) => {
     try {
         const {email, password} = req.body;
         const admin = await getAdmins();
-        const adminEmail = admin.find((a) => a.email === email);
+        const adminEmail = admin.find((a) => a.email === email.trim());
         if (!adminEmail) {
             return res.status(401).json({ msg: "Invalid Credentials" });
         }
